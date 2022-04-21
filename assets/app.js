@@ -14,8 +14,7 @@ const docContainer = document.getElementById('docContainer');
 const stopVideo = document.getElementById('stopVid');
 
 const getPasscode = () => {
-  const passcode = 'LSU22'
-  return passcode;
+  return 'LSU22';
 };
 
 const trackSubscribed = (div, track) => {
@@ -74,7 +73,6 @@ const participantDisconnected = (participant) => {
 (() => {
   const { Video } = Twilio;
   let videoRoom;
-  let localStream;
   const video = document.getElementById('video');
 
   // preview screen
@@ -82,7 +80,6 @@ const participantDisconnected = (participant) => {
     .getUserMedia({ video: true, audio: true })
     .then((vid) => {
       video.srcObject = vid;
-      localStream = vid;
     });
   
   const docButton = document.getElementById('doctor-screen-button');
@@ -106,7 +103,6 @@ const participantDisconnected = (participant) => {
     .getUserMedia({ video: true, audio: true })
     .then((vid) => {
       docVideo.srcObject = vid;
-      localStream = vid;
     });
     fetch(`video-token?passcode=${getPasscode()}`)
     .then((resp) => {
@@ -134,7 +130,7 @@ const participantDisconnected = (participant) => {
       room.on('participantConnected', patParticipantConnected);
 
       room.on('participantDisconnected', participantDisconnected);
-      room.once('disconnected', (error) =>
+      room.once('disconnected', (_error) =>
         room.participants.forEach(participantDisconnected)
       );
       postConnectControls.style.display = 'block';
@@ -162,7 +158,6 @@ const participantDisconnected = (participant) => {
     .getUserMedia({ video: true, audio: true })
     .then((vid) => {
       patVideo.srcObject = vid;
-      localStream = vid;
     });
     fetch(`video-token?passcode=${getPasscode()}`)
     .then((resp) => {
@@ -190,7 +185,7 @@ const participantDisconnected = (participant) => {
       room.on('participantConnected', docParticipantConnected);
 
       room.on('participantDisconnected', participantDisconnected);
-      room.once('disconnected', (error) =>
+      room.once('disconnected', (_error) =>
         room.participants.forEach(participantDisconnected)
       );
       postConnectControls.style.display = 'block';
@@ -208,7 +203,7 @@ const participantDisconnected = (participant) => {
   docButton.onclick = docScreen;
 
   // leave room
-  leaveRoom = (event) => {
+  const leaveRoom = (event) => {
     videoRoom.disconnect();
     console.log(`Disconnected from Room ${videoRoom.name}`);
     welcomeText.style.display = 'block';

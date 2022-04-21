@@ -112,7 +112,6 @@ footer {
   -moz-appearance: none;
   appearance: none;
   background: none;
-  background-color: rgba(0, 0, 0, 0);
   display: inline-block;
   border: none;
   outline: none;
@@ -130,7 +129,6 @@ footer {
   position: relative;
   margin: 0;
   cursor: pointer;
-  color: rgb(255, 255, 255);
   background-color: black;
   box-shadow: 0 0 0 1px rgb(62, 62, 62);
   padding-top: 0.5rem;
@@ -193,7 +191,6 @@ footer {
   -moz-appearance: none;
   appearance: none;
   background: none;
-  background-color: rgba(0, 0, 0, 0);
   display: inline-block;
   border: none;
   outline: none;
@@ -211,7 +208,6 @@ footer {
   position: relative;
   margin: 0;
   cursor: pointer;
-  color: rgb(255, 255, 255);
   background-color: black;
   box-shadow: 0 0 0 1px rgb(62, 62, 62);
   padding-top: 0.5rem;
@@ -224,7 +220,6 @@ footer {
   height: 45px;
   left: 780px;
   mix-blend-mode: normal;
-  position: relative;
   top: 170px;
   width: 347px;
 }
@@ -263,7 +258,6 @@ transparent;
   -moz-appearance: none;
   appearance: none;
   background: none;
-  background-color: rgba(0, 0, 0, 0);
   display: inline-block;
   border: none;
   outline: none;
@@ -281,7 +275,6 @@ transparent;
   position: relative;
   margin: 0;
   cursor: pointer;
-  color: rgb(255, 255, 255);
   background-color: black;
   box-shadow: 0 0 0 1px rgb(62, 62, 62);
   padding-top: 0.5rem;
@@ -294,7 +287,6 @@ transparent;
   height: 45px;
   left: 780px;
   mix-blend-mode: normal;
-  position: relative;
   top: 170px;
   width: 347px;
 }
@@ -315,12 +307,11 @@ transparent;
 
 .button-destruct{
   box-sizing: border-box;
-  width: auto;
+  width: 215px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   background: none;
-  background-color: rgba(0, 0, 0, 0);
   display: inline-block;
   border: none;
   outline: none;
@@ -334,7 +325,7 @@ transparent;
   font-weight: 600;
   -webkit-text-decoration: none;
   text-decoration: none;
-  position: absolute;
+  position: relative;
   margin: 0;
   cursor: pointer;
   color: rgb(255, 255, 255);
@@ -348,11 +339,9 @@ transparent;
   font-size: 0.875rem;
   line-height: 1.25rem; 
   height: 45px;
-  left: 1018px;
+  left: 1015px;
   mix-blend-mode: normal;
-  position: relative;
-  top: 95px;
-  width: 206px;
+  top: 130px;
 }
 
 .doctor{
